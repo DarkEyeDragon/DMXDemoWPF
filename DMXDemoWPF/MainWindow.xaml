@@ -1,0 +1,27 @@
+﻿<Window x:Class="DMXDemoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMXDemoWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Closing="Window_Closing">
+    <Grid Margin="10">
+	<GroupBox Header="Kies je poort" Height="70" VerticalAlignment="Top" Padding="10">
+		<ComboBox Name="cbxPorts" SelectionChanged="cbxPorts_SelectionChanged"></ComboBox>
+	</GroupBox>
+	<GroupBox Header="Rood" Margin="0,75,0,0" Padding="10" Height="70" VerticalAlignment="Top">
+            <Slider Name="sldrRed" VerticalAlignment="Center" IsEnabled="False" ValueChanged="sldr_ValueChanged"
+				TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="255"></Slider>
+	</GroupBox>
+	<GroupBox Header="Groen" Margin="0,150,0,0" Padding="10" Height="70" VerticalAlignment="Top">
+            <Slider Name="sldrGreen" VerticalAlignment="Center" IsEnabled="False" ValueChanged="sldr_ValueChanged"
+				TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="255"></Slider>
+	</GroupBox>
+	<GroupBox Header="Blauw" Margin="0,228,0,0" Padding="10" Height="70" VerticalAlignment="Top">
+            <Slider Name="sldrBlue" VerticalAlignment="Center" IsEnabled="False" ValueChanged="sldr_ValueChanged"
+				TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="255"></Slider>
+	</GroupBox>
+</Grid>
+</Window>
